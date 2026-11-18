@@ -1,0 +1,125 @@
+{
+  "dataset": "TrashNet (dataset-resized), stratified 70/15/15 split",
+  "base_model": "yolov8n-cls (ImageNet-pretrained)",
+  "classes": [
+    "cardboard",
+    "glass",
+    "metal",
+    "paper",
+    "plastic",
+    "trash"
+  ],
+  "split_sizes": {
+    "train": {
+      "cardboard": 283,
+      "glass": 351,
+      "metal": 286,
+      "paper": 416,
+      "plastic": 338,
+      "trash": 95
+    },
+    "val": {
+      "cardboard": 60,
+      "glass": 75,
+      "metal": 62,
+      "paper": 89,
+      "plastic": 72,
+      "trash": 21
+    },
+    "test": {
+      "cardboard": 60,
+      "glass": 75,
+      "metal": 62,
+      "paper": 89,
+      "plastic": 72,
+      "trash": 21
+    }
+  },
+  "epochs": 15,
+  "imgsz": 224,
+  "seed": 0,
+  "trained_at": "2026-10-31T12:54:26+00:00",
+  "test_accuracy": 0.9182,
+  "per_class": {
+    "cardboard": {
+      "precision": 0.9636,
+      "recall": 0.8833,
+      "support": 60
+    },
+    "glass": {
+      "precision": 0.9259,
+      "recall": 1.0,
+      "support": 75
+    },
+    "metal": {
+      "precision": 0.9206,
+      "recall": 0.9355,
+      "support": 62
+    },
+    "paper": {
+      "precision": 0.9101,
+      "recall": 0.9101,
+      "support": 89
+    },
+    "plastic": {
+      "precision": 0.9275,
+      "recall": 0.8889,
+      "support": 72
+    },
+    "trash": {
+      "precision": 0.7727,
+      "recall": 0.8095,
+      "support": 21
+    }
+  },
+  "confusion": {
+    "cardboard": {
+      "cardboard": 53,
+      "glass": 0,
+      "metal": 0,
+      "paper": 5,
+      "plastic": 2,
+      "trash": 0
+    },
+    "glass": {
+      "cardboard": 0,
+      "glass": 75,
+      "metal": 0,
+      "paper": 0,
+      "plastic": 0,
+      "trash": 0
+    },
+    "metal": {
+      "cardboard": 0,
+      "glass": 2,
+      "metal": 58,
+      "paper": 0,
+      "plastic": 1,
+      "trash": 1
+    },
+    "paper": {
+      "cardboard": 2,
+      "glass": 0,
+      "metal": 3,
+      "paper": 81,
+      "plastic": 1,
+      "trash": 2
+    },
+    "plastic": {
+      "cardboard": 0,
+      "glass": 4,
+      "metal": 1,
+      "paper": 1,
+      "plastic": 64,
+      "trash": 2
+    },
+    "trash": {
+      "cardboard": 0,
+      "glass": 0,
+      "metal": 1,
+      "paper": 2,
+      "plastic": 1,
+      "trash": 17
+    }
+  }
+}

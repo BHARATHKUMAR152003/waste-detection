@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.env
+# Downloaded by scripts/download_detector.py; the trained waste-cls.pt and metrics.json are committed.
+models/yolov8n.pt
+models/*.part

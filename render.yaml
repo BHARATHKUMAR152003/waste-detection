@@ -1,0 +1,17 @@
+# Render Blueprint: Render dashboard > New > Blueprint > select this repository.
+# Docker is used because OpenCV needs system libraries (libgl1) that the native runtime lacks.
+services:
+  - type: web
+    name: waste-detection-api
+    runtime: docker
+    plan: free
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    healthCheckPath: /api/health
+    autoDeployTrigger: checksPass
+    envVars:
+      - key: PORT
+        value: "8000"
+      # Origin of the GitHub Pages frontend (scheme + host only, no path).
+      - key: CORS_ORIGINS
+        value: https://bharathkumar152003.github.io
